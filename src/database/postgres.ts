@@ -103,7 +103,7 @@ export const createConnectionPool = (
     connection: {
       host,
       user: mode,
-      database: "arweave",
+      database: "bigfile",
       ssl: {
         rejectUnauthorized: false,
       },

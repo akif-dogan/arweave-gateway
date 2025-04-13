@@ -67,7 +67,7 @@ export const getData = async (
     if (txHeader && txHeader.data_size > 0 && txHeader.parent) {
       log.info(`[get-data] item is data bundle item, searching for parent tx`, {
         txid,
-        bundlerDataPath,
+        bundlerDataPath: process.env.BUNDLER_DATA_PATH || '',
         parent: txHeader.parent,
       });
       const parent = await getData(txHeader.parent, { log });
